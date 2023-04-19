@@ -23,22 +23,18 @@ function merge(array1, array2) {
   return arrayToReturn;
 }
 
-
 function mergeSort(arr) {
-    if(arr.length <= 1) {
-        return arr;
-    }
+  if (arr.length <= 1) {
+    return arr;
+  }
 
-    let mid = Math.floor(arr.length/2)
+  let mid = Math.floor(arr.length / 2);
 
-    let left = mergeSort(arr.slice(0,mid))
-    let right = mergeSort(arr.slice(mid))
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
 
-    return merge(left,right)
-
-
+  return merge(left, right);
 }
-
 
 const result = mergeSort([0, 0, 3, 11, 9, 22, 5, 3, 6, 10, 88]);
 console.log(result);
