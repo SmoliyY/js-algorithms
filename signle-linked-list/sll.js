@@ -67,6 +67,98 @@ class SingleLinkedList {
     }
     return valueToReturn;
   }
+
+  unshift(value) {
+    const newNode = new Node(value);
+
+    if (!this.length) {
+      this.tail = newNode;
+      this.head = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+
+    this.length += 1;
+
+    return this;
+  }
+
+  get(index) {
+    if (index < 0 || index >= this.length) return null;
+
+    if (index === 0) {
+      return this.head;
+    }
+
+    let currentNode = this.head;
+    let counter = 0;
+    while (counter !== index) {
+      currentNode = currentNode.next;
+      counter += 1;
+    }
+
+    return currentNode;
+  }
+
+  set(index, value) {
+    const nodeToUpdate = this.get(index);
+    if (!nodeToUpdate) return false;
+    nodeToUpdate.value = value;
+    return true;
+  }
+
+  insert(index, value) {
+    if (index < 0 || index > this.length) return false;
+
+    if (index === 0) return !!this.unshift(value);
+
+    if (index === this.length) return !!this.push(value);
+
+    const preNode = this.get(index - 1);
+
+    const nodeToInsert = new Node(value);
+
+    nodeToInsert.next = preNode.next;
+    preNode.next = nodeToInsert;
+    this.length += 1;
+
+    return true;
+  }
+
+  remove(index) {
+    if (index < 0 || index >= this.length) return;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+
+    const preNode = this.get(index - 1);
+
+    const nodeToReturn = preNode.next;
+
+    preNode.next = nodeToReturn.next;
+
+    this.length -= 1;
+
+    return nodeToReturn;
+  }
+
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+
+    let nextNode;
+    let prevNode = null;
+
+    for (let i = 0; i < this.length; i++) {
+      nextNode = node.next;
+      node.next = prevNode;
+      prevNode = node;
+      node = nextNode;
+    }
+
+    return this;
+  }
 }
 
 const a = new SingleLinkedList();
@@ -74,8 +166,6 @@ const a = new SingleLinkedList();
 a.push(22);
 a.push(23);
 a.push(4);
-a.pop();
-a.pop();
-a.pop();
-a.push(4);
-a.shift();
+a.push(99);
+
+console.log(a);
