@@ -107,20 +107,65 @@ class DoublyLinkedList {
 
   set(index, value) {
     const node = this.get(index);
-    if(!node) return false;
+    if (!node) return false;
     node.value = value;
     return true;
+  }
+
+  insert(index, value) {
+    if (index < 0 || index >= this.length) return false;
+
+    if (!this.length) return false;
+
+    if (index === 0) return !!this.unshift(value);
+
+    if (index === this.length) return !!this.push(value);
+
+    const beforeNode = this.get(index - 1);
+    const afterNode = beforeNode.next;
+
+    const newNode = new Node(value);
+
+    newNode.next = afterNode;
+    newNode.prev = beforeNode;
+
+    afterNode.prev = newNode;
+    beforeNode.next = newNode;
+
+    this.length += 1;
+
+    return true;
+  }
+
+  remove(index) {
+    if (index < 0 || index >= this.length) return;
+    if (index === 0) return this.shift();
+    if (index === this.length-1) return this.pop(value);
+
+    const nodeToRemove = this.get(index);
+    const beforeNodeToRemove = nodeToRemove.prev;
+    const afterNodeToRemove = nodeToRemove.next;
+
+    beforeNodeToRemove.next = afterNodeToRemove;
+    afterNodeToRemove.prev = beforeNodeToRemove;
+
+    nodeToRemove.next = null;
+    nodeToRemove.prev = null;
+
+    this.length-=1;
+
+    return nodeToRemove;
   }
 }
 
 list = new DoublyLinkedList();
 
-list.push(33)
-list.push(44)
-list.push(55)
-list.push(66)
-list.push(77)
-list.unshift(11)
-list.unshift(5)
-list.set(0,999)
-console.log(list.get(0));
+list.push(33);
+list.push(55);
+list.push(100)
+list.insert(2, 44);
+// list.remove(0)
+
+console.log(list.remove(2));
+
+console.log(list)
