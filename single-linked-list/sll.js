@@ -168,4 +168,7 @@ a.push(23);
 a.push(4);
 a.push(99);
 
-console.log(a);
+
+module.exports = {
+  Node
+}
