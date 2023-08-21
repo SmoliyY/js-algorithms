@@ -3,6 +3,7 @@ const assert = require("assert");
 
 /**
     Write a function factorial which accepts a number 
+    fuctorial!!!!!!
     and returns the factorial of that number. 
     A factorial is the product of an integer and all the integers below it; e.g., 
     factorial four ( 4! ) is equal to 24, 
