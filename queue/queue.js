@@ -45,4 +45,3 @@ console.log(queue.dequeue());
 console.log(queue.dequeue());
 
 // console.log(queue)
-s
