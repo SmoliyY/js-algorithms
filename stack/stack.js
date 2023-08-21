@@ -43,4 +43,4 @@ console.log(stack.pop());
 console.log(stack.pop());
 console.log(stack.pop());
 
-// Ensure branch
+// Branch branch
