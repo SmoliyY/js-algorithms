@@ -24,3 +24,6 @@ function reverse(inputString) {
 assert.equal(reverse('tralala'), 'alalart');
 assert.equal(reverse('ben'), 'neb');
 assert.equal(reverse('yevhen'), 'nehvey')
+
+
+console.log(22)
