@@ -43,4 +43,6 @@ console.log(stack.pop());
 console.log(stack.pop());
 console.log(stack.pop());
 
-// by by duck3
+console.log('stack')
+
+// by by duck4
