@@ -5,7 +5,7 @@ class Node {
   }
 }
 
-// comment
+//22222 comment
 
 class SingleLinkedList {
   constructor() {
