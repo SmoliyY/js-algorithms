@@ -1,5 +1,5 @@
 const { Node } = require("../single-linked-list/sll");
-
+// add some changes
 class Queue {
   constructor() {
     this.last = null;
