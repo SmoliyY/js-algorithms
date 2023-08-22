@@ -5,6 +5,8 @@ class Node {
   }
 }
 
+// comment
+
 class SingleLinkedList {
   constructor() {
     this.tail = null;
