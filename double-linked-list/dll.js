@@ -6,8 +6,8 @@ class Node {
   }
 }
 
-// comment
-
+// comment 2
+ 
 class DoublyLinkedList {
   constructor() {
     this.head = null;
