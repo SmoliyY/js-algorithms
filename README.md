@@ -6,7 +6,7 @@ Udemy algorithms course progress and examples.
 
 Run in the cli:
 
- run run run
+failed run run run
 
 ```bash
 node <path>/<problem-name>.js
