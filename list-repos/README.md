@@ -2,7 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 TIME Estimation = 5-6 hours
-
 ## Available Scripts
 
 In the project directory, you can run:
