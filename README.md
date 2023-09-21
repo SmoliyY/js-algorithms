@@ -2,7 +2,7 @@
 
 Udemy algorithms course progress and examples.
 
-updated4
+updated12
 
 ### Run script
 
