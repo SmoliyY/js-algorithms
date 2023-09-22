@@ -1,7 +1,7 @@
 ### JS algorithms course 
 
 Udemy algorithms course progress and examples.
-
+1
 
 ### Run script
 
