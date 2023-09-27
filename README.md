@@ -1,7 +1,9 @@
 ### JS algorithms course 
 
 Udemy algorithms course progress and examples.
-commit
+
+commiting
+
 ### Run script
 
 Run in the cli:
