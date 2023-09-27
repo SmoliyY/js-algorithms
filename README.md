@@ -2,7 +2,7 @@
 
 Udemy algorithms course progress and examples.
 
-commiting
+node node 
 
 ### Run script
 
