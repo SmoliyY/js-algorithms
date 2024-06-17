@@ -166,7 +166,6 @@ list.push(33);
 list.push(55);
 list.push(100)
 list.insert(2, 44);
-// list.remove(0)
 
 console.log(list.remove(2));
 

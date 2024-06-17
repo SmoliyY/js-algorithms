@@ -34,14 +34,8 @@ class Queue {
   }
 }
 
-const queue = new Queue();
 
-queue.enqueue(33);
-queue.enqueue(22);
-queue.enqueue(11);
-console.log(queue.dequeue());
-console.log(queue.dequeue());
-console.log(queue.dequeue());
-console.log(queue.dequeue());
+module.exports = {
+  Queue
+}
 
-// console.log(queue)
