@@ -1,5 +1,5 @@
 ### JS algorithms course 
-sssss
+
 
 ### Run script
 asdasdadad
